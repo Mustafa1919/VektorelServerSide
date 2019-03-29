@@ -1,0 +1,28 @@
+package spook.gui;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class MainFrame extends JFrame{
+	
+	public MainFrame() {
+		initialize();
+	}
+
+	private void initialize() {
+		// TODO Auto-generated method stub
+		setBounds(100, 100, 480	, 300);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		getContentPane().setLayout(null);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(189, 94, 116, 63);
+		getContentPane().add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.setBounds(189, 193, 116, 63);
+		getContentPane().add(btnNewButton_1);
+		
+		
+	}
+}

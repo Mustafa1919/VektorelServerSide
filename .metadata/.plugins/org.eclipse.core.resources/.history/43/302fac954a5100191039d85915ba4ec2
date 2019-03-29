@@ -1,0 +1,75 @@
+package spook.socket.arrival;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.SocketException;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import spook.connectionPool.ConnectionPool;
+import spook.socket.fragment.FragmentationData;
+import spook.util.SocketInfo;
+
+/*
+ * ListeningSocket sinifi clientlerden gelen datalari dinlemek icin kullanilan siniftir
+ * Gelen datalar dinlenerek datalari acmak icin olusturulan sinifa referansla aktarim yapar
+ * Bu class sadece kayit olma istegi ve giris yapma isteklerini dinler 
+ * Ve gerekli sinifa aktarim saglar
+ * Sinif sadece dinleme gerceklestirir ve clientlere mesaj gondermez.
+ */
+public class ListeningSocket extends Thread {
+
+	private ServerSocket serverSocket;
+	private Socket socket;
+	private DataInputStream inputStream;
+	private DataOutputStream outputStream;
+	private ConnectionPool connectionPool;
+	private boolean statement;
+	private FragmentationData fragmentationData;
+
+	public ListeningSocket(ServerSocket serverSocket, Socket socket) throws IOException, SocketException {
+		this.statement = true;
+		this.serverSocket = serverSocket;
+		this.socket = socket;
+		connectionPool = ConnectionPool.getConnectionPool();
+		this.fragmentationData = new FragmentationData();
+	}
+
+	@Override
+	public void run() {
+		String data;
+		try {
+			while (statement) {
+				inputStream = new DataInputStream(socket.getInputStream());
+				outputStream = new DataOutputStream(socket.getOutputStream());
+				while (true) {
+					data = inputStream.readUTF();
+					System.out.println("Thread : " + getName() + "   " + data);
+					// parcalama islemleri yapilan sinifa aktarim yapilacak
+					new FragmentationData();
+				}
+			}
+
+		} catch (IOException e) {
+			// Loglama yap
+		}
+		try {
+			System.out.println("Thread : " + getName() + "  sonlandı...");
+			this.socket.close();
+			this.inputStream.close();
+			this.outputStream.close();
+			connectionPool.deleteUser(ListeningSocket.this);
+		} catch (IOException e) {
+			System.out.println("Listening socket kapatma islemlerinde hata olustu...");
+		}
+	}
+
+	private void isClosed() {
+		this.statement = false;
+	}
+
+}

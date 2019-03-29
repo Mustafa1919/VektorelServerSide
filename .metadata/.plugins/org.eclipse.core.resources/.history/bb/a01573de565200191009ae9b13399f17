@@ -1,0 +1,30 @@
+package spook.gui;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class LogOnPanel extends JPanel{
+	
+	private JTextField txtUserName;
+	private JTextField txtPasswd;
+	private JTextField txtServerIp;
+
+	private JLabel lblNewLabel;
+	private JLabel lblifre;
+	private JLabel lblServerIp;
+
+	private JButton btnLogin;
+	private JButton btnCancel;
+	
+	public LogOnPanel() {
+		initialize();
+	}
+
+	private void initialize() {
+		setLayout(null);
+		setBounds(0, 0, 480, 540);
+	}
+
+}

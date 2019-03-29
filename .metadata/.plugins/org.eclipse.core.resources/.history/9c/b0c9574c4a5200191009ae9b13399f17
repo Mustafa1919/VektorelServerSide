@@ -1,0 +1,57 @@
+package spook.gui;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class LoginPanel extends JPanel{
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	
+	public LoginPanel() {
+		initialize();
+	}
+
+	private void initialize() {
+		setLayout(null);
+		setBounds(0, 0, 480	, 540);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setBounds(78, 134, 89, 14);
+		add(lblNewLabel);
+		
+		textField = new JTextField();
+		textField.setBounds(203, 131, 154, 20);
+		add(textField);
+		textField.setColumns(10);
+		
+		JLabel label = new JLabel("New label");
+		label.setBounds(78, 188, 89, 14);
+		add(label);
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(203, 185, 154, 20);
+		add(textField_1);
+		
+		JButton btnNewButton = new JButton("New button");
+		
+		btnNewButton.setBounds(88, 358, 89, 23);
+		add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.setBounds(237, 358, 89, 23);
+		add(btnNewButton_1);
+		
+		JLabel label_1 = new JLabel("New label");
+		label_1.setBounds(78, 250, 89, 14);
+		add(label_1);
+		
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_2.setBounds(203, 247, 154, 20);
+		add(textField_2);
+	}
+}

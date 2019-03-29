@@ -1,0 +1,26 @@
+package spook.database.service;
+
+import spook.database.iservice.IMessageService;
+import spook.model.Message;
+
+public class MessageService implements IMessageService{
+	
+	@Override
+	public boolean save(Message message) throws Exception {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean update(Message message) throws Exception {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delete(Message message) throws Exception {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

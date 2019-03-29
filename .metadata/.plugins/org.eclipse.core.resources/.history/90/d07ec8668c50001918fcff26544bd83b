@@ -1,0 +1,16 @@
+package spook.connectionPool;
+
+import java.util.List;
+
+public class ConnectionPool {
+	
+	private static ConnectionPool pool = null;
+	private List<E> list ;
+	
+	
+	private ConnectionPool() {
+		
+	}
+	
+	
+}

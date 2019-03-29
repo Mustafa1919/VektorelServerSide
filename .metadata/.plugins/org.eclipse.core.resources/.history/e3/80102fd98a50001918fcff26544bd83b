@@ -1,0 +1,31 @@
+package test.server;
+
+import java.io.IOException;
+
+import spook.socket.arrival.ListeningSocket;
+
+public class TestServerRunner {
+	public static void main(String[] args) {
+		
+		try {
+			ListeningSocket[] ls = new ListeningSocket[10];
+			Runnable  thread = new Runnable() {
+				int temp = 0;
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					try {
+						ls[temp] = new ListeningSocket();
+						ls[temp++].run();
+					}catch (Exception e) {
+						// TODO: handle exception
+					}
+				}
+			};
+			thread.run();
+
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

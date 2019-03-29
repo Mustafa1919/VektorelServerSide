@@ -1,0 +1,18 @@
+package spook.database.dao;
+
+import java.util.List;
+
+import spook.database.idao.IUserDao;
+import spook.jutil.DataBaseServis;
+import spook.model.User;
+
+public class UserDao extends DataBaseServis<User> implements IUserDao{
+
+	@Override
+	public String userGetIp(String userName) {
+		String ip;
+		List<User> listUser = listele(new User())
+		return null;
+	}
+
+}

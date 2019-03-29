@@ -1,0 +1,5 @@
+package spook.database.service;
+
+public class MessageService {
+
+}

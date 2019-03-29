@@ -1,0 +1,5 @@
+package spook.database.dao;
+
+public class MessageDao {
+
+}

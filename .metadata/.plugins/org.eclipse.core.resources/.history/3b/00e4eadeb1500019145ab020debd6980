@@ -1,0 +1,22 @@
+package spook.socket.arrival;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+import spook.connectionPool.ConnectionPool;
+
+public class LayerSocket {
+	
+	private ServerSocket serverSocket ;
+	private ConnectionSocket connectionSocket ;
+	private ConnectionPool connectionPool;
+	
+	public LayerSocket() throws IOException{
+		
+		connectionSocket = ConnectionSocket.getConnectionSocket();
+		serverSocket = connectionSocket.getServerSocket();
+	}
+	
+	
+
+}

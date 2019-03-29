@@ -1,0 +1,15 @@
+INDEX VERSION 1.131+D:\Projeler\VektorelProje\Server-Client\.metadata\.plugins\org.eclipse.jdt.core
+3172632608.index
+1289910051.index
+943028265.index
+614373661.index
+3373442739.index
+4110413392.index
+2183054880.index
+3105540309.index
+2122460063.index
+3491893969.index
+1778873162.index
+142154670.index
+1562612869.index
+852548344.index

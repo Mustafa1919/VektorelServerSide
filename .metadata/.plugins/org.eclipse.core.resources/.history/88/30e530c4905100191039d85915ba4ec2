@@ -1,0 +1,9 @@
+package spook.database.dao;
+
+import spook.database.idao.IUserDao;
+import spook.jutil.DataBaseServis;
+import spook.model.User;
+
+public class UserDao extends DataBaseServis<User> implements IUserDao{
+
+}

@@ -1,0 +1,11 @@
+package spook.socket.fragment;
+
+public class FragmentationData {
+	
+	public FragmentationData() {
+		
+	}
+	
+	
+	
+}	

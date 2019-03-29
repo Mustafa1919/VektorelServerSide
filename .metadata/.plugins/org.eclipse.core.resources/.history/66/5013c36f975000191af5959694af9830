@@ -1,0 +1,24 @@
+package test.server;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+import spook.socket.arrival.ListeningSocket;
+import spook.util.SocketInfo;
+
+public class TestServerRunner {
+	public static void main(String[] args) {
+		ServerSocket serverSocket;
+		try {
+			serverSocket = new ServerSocket(SocketInfo.listeningSocket);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			new ListeningSocket(serverSocket).start();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

@@ -1,0 +1,12 @@
+package spook.socket.arrival;
+
+import java.net.ServerSocket;
+
+public class ConnectionSocket extends Thread{
+	
+	private ServerSocket serverSocket = null;
+	
+	private ConnectionSocket() {
+		
+	}
+}

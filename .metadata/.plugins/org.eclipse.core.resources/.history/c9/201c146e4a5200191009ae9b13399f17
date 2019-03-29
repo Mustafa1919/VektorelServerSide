@@ -1,0 +1,57 @@
+package spook.gui;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class LoginPanel extends JPanel{
+	private JTextField txtUserName;
+	private JTextField txtPasswd;
+	private JTextField txtServerIp;
+	
+	public LoginPanel() {
+		initialize();
+	}
+
+	private void initialize() {
+		setLayout(null);
+		setBounds(0, 0, 480	, 540);
+		
+		JLabel lblNewLabel = new JLabel("Kullanıcı Adı : ");
+		lblNewLabel.setBounds(78, 134, 89, 14);
+		add(lblNewLabel);
+		
+		txtUserName = new JTextField();
+		txtUserName.setBounds(203, 131, 154, 20);
+		add(txtUserName);
+		txtUserName.setColumns(10);
+		
+		JLabel lblifre = new JLabel("Şifre : ");
+		lblifre.setBounds(78, 188, 89, 14);
+		add(lblifre);
+		
+		txtPasswd = new JTextField();
+		txtPasswd.setColumns(10);
+		txtPasswd.setBounds(203, 185, 154, 20);
+		add(txtPasswd);
+		
+		JButton btnNewButton = new JButton("New button");
+		
+		btnNewButton.setBounds(88, 358, 89, 23);
+		add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.setBounds(237, 358, 89, 23);
+		add(btnNewButton_1);
+		
+		JLabel lblServerIp = new JLabel("Server Ip : ");
+		lblServerIp.setBounds(78, 238, 89, 14);
+		add(lblServerIp);
+		
+		txtServerIp = new JTextField();
+		txtServerIp.setColumns(10);
+		txtServerIp.setBounds(203, 235, 154, 20);
+		add(txtServerIp);
+	}
+}

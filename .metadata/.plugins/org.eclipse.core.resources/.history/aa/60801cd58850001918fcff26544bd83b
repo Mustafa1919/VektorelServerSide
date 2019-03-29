@@ -1,0 +1,19 @@
+package test.server;
+
+import java.io.IOException;
+
+import spook.socket.arrival.ListeningSocket;
+
+public class TestServerRunner {
+	public static void main(String[] args) {
+		try {
+			ListeningSocket ls = new ListeningSocket();
+			while (true) {
+				ls.run();
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

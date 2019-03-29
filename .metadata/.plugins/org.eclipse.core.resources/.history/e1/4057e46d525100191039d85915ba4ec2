@@ -1,0 +1,7 @@
+package spook.database.service;
+
+import spook.database.iservice.IUserService;
+
+public class UserService implements IUserService{
+
+}

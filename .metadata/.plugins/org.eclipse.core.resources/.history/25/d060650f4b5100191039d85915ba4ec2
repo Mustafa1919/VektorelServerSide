@@ -1,0 +1,14 @@
+package spook.socket.fragment;
+
+public class FragmentationData {
+	
+	public FragmentationData() {
+		
+	}
+	
+	public boolean fragmentData(String data) {
+		
+		return false;
+	}
+	
+}	

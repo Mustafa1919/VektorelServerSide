@@ -1,0 +1,26 @@
+package spook.socket.arrival;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+
+public class ConnectionSocket extends Thread{
+	
+	private Socket socket;
+	private DataInputStream inputStream;
+	private DataOutputStream outputStream;
+	private String ip;
+	private int port;
+	public ConnectionSocket(String ip, int port) throws IOException {
+		this.ip = ip;
+		this.port = port;
+		socket = new Socket(this.ip, this.port);
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		super.run();
+	}
+}

@@ -1,0 +1,5 @@
+package spook.gui;
+
+public class LoginPanel {
+
+}

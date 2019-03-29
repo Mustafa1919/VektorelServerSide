@@ -1,0 +1,25 @@
+package spook.connectionPool;
+
+import java.util.List;
+
+import spook.socket.arrival.ConnectionSocket;
+import spook.socket.arrival.ListeningSocket;
+
+public class ConnectionPool {
+	
+	private static ConnectionPool pool = null;
+	private List<ListeningSocket> list ;
+	
+	
+	private ConnectionPool() {
+		
+	}
+	
+	public static ConnectionPool getConnectionPool() {
+		if(pool == null)
+			poo = new ConnectionPool();
+		return pool;
+	}
+	
+	
+}

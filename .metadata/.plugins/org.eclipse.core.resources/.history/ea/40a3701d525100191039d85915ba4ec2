@@ -1,0 +1,11 @@
+package spook.database.iservice;
+
+import spook.model.User;
+
+public interface IUserService {
+	
+	public boolean save(User user) throws Exception;
+	
+	
+
+}

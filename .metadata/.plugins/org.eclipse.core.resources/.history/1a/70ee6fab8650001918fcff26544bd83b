@@ -1,0 +1,28 @@
+package test1;
+
+public class RUnner {
+	package test.client;
+
+	import java.io.DataInputStream;
+	import java.io.DataOutputStream;
+	import java.io.IOException;
+	import java.net.Socket;
+
+	import spook.util.SocketInfo;
+
+	public class Test2 {
+		public static void main(String[] args) {
+			try {
+				Socket socket = new Socket("localhost", SocketInfo.listeningSocket);
+				DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());
+				DataInputStream inputStream = new DataInputStream(socket.getInputStream());
+				
+				outputStream.writeUTF("Hello");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+
+}

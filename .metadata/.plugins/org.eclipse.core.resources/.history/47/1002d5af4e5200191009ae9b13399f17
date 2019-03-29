@@ -1,0 +1,10 @@
+package spook.controller;
+
+public class LoginController {
+	
+	public boolean checkIp() {
+		
+		return false;
+	}
+
+}

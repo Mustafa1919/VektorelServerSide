@@ -1,0 +1,15 @@
+package spook.gui;
+
+import javax.swing.JFrame;
+
+public class MainFrame extends JFrame{
+	public MainFrame() {
+		initialize();
+	}
+
+	private void initialize() {
+		// TODO Auto-generated method stub
+		setBounds(100, 100, 600, 600);
+	}
+
+}

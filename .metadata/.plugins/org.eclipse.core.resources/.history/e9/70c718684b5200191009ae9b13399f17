@@ -1,0 +1,5 @@
+package spook.server.connection;
+
+public class ServerConnection {
+
+}

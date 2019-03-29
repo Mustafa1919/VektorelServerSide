@@ -1,0 +1,16 @@
+package spook.gui;
+
+import javax.swing.JPanel;
+
+public class LogOnPanel extends JPanel{
+	
+	public LogOnPanel() {
+		initialize();
+	}
+
+	private void initialize() {
+		setLayout(null);
+		setBounds(0, 0, 480, 540);
+	}
+
+}

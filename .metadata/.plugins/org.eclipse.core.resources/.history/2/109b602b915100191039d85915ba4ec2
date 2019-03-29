@@ -1,0 +1,16 @@
+package spook.database.iservice;
+
+import spook.database.dao.MessageDao;
+import spook.database.idao.IMessageDao;
+
+public interface IMessageService {
+	
+	public IMessageDao messageDao = new MessageDao();
+	
+	public boolean save(String data) throws Exception;
+	
+	public boolean update(String data) throws Exception;
+	
+	public boolean delete(String data) throws Exception;
+	
+}

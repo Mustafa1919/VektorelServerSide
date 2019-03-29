@@ -1,0 +1,52 @@
+package spook.socket.arrival;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.SocketException;
+import java.util.List;
+
+import spook.socket.fragment.FragmentationData;
+import spook.util.SocketInfo;
+
+/*
+ * ListeningSocket sinifi clientlerden gelen datalari dinlemek icin kullanilan siniftir
+ * Gelen datalar dinlenerek datalari acmak icin olusturulan sinifa referansla aktarim yapar
+ * Bu class sadece kayit olma istegi ve giris yapma isteklerini dinler 
+ * Ve gerekli sinifa aktarim saglar
+ * Sinif sadece dinleme gerceklestirir ve clientlere mesaj gondermez.
+ */
+public class ListeningSocket extends Thread {
+
+	private ServerSocket serverSocket;
+	private Socket socket;
+	private DataInputStream inputStream;
+
+	public ListeningSocket() throws IOException, SocketException {
+		serverSocket = new ServerSocket(SocketInfo.listeningSocket);
+	}
+
+	@Override
+	public void run() {
+		String data;
+		try {
+
+			while (true) {
+				socket = serverSocket.accept();
+				inputStream = new DataInputStream(socket.getInputStream());
+				//while (true) {
+					data = inputStream.readUTF();
+					System.out.println("Thread : " + getName() + "   " + data);
+					// parcalama islemleri yapilan sinifa aktarim yapilacak
+					// new FragmentationData();
+				//}
+			}
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+
+		}
+	}
+
+}

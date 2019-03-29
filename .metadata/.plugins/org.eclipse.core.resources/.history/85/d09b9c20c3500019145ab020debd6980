@@ -1,0 +1,39 @@
+package test.server;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.util.ArrayList;
+import java.util.List;
+
+import spook.socket.arrival.LayerSocket;
+import spook.socket.arrival.ListeningSocket;
+import spook.util.SocketInfo;
+
+public class TestServerRunner {
+	public static void main(String[] args) {
+		try {
+			LayerSocket layerSocket = new LayerSocket();
+			layerSocket.StartListening();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+//		ServerSocket serverSocket = null;
+//		List<ListeningSocket> liste = new ArrayList<>();
+//		try {
+//			serverSocket = new ServerSocket(SocketInfo.listeningSocket);
+//		} catch (IOException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
+//		while (true) {
+//			try {
+//				liste.add(new ListeningSocket(serverSocket));
+//				liste.get(liste.size()-1).start();
+//			} catch (Exception e) {
+//				// TODO: handle exception
+//			}
+//		}
+	}
+}

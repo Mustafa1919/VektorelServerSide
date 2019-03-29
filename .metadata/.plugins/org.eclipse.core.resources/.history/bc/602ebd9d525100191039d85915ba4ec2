@@ -1,0 +1,13 @@
+package spook.database.iservice;
+
+import spook.model.Message;
+
+public interface IMessageService {
+	
+	public boolean save(Message message) throws Exception;
+	
+	public boolean update(Message message) throws Exception;
+	
+	public boolean delete(Message message) throws Exception;
+	
+}

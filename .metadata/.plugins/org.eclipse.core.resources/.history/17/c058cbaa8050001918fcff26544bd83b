@@ -1,0 +1,5 @@
+package spook.util;
+
+public class SocketInfo {
+
+}

@@ -1,0 +1,13 @@
+package test.server;
+
+import spook.socket.arrival.ListeningSocket;
+
+public class TestServerRunner {
+	public static void main(String[] args) {
+		try {
+			ListeningSocket ls = new ListeningSocket().start();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

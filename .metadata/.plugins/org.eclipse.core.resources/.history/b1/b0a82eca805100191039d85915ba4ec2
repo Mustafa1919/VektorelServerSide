@@ -1,0 +1,34 @@
+package spook.socket.fragment;
+
+import spook.database.iservice.IMessageService;
+import spook.database.service.MessageService;
+import spook.staticNumber.PriorityCode;
+
+public class FragmentationSqlCommend {
+	
+	private IMessageService messageService;
+	
+	public FragmentationSqlCommend() {
+		messageService = new MessageService();
+	}
+
+	public void fragmentSql(String data) {
+		String priority = data.substring(0, 3);
+		
+		if(priority.equals(PriorityCode.Save)) {
+			//kaydetme servisini cagır
+		}
+		else if(priority.equals(PriorityCode.Update)) {
+			//guncelleme servisi cagir
+		}
+		else if(priority.equals(PriorityCode.Delete)) {
+			//delete servisi cagir
+		}
+		else if(priority.equals(PriorityCode.ListReturn)) {
+			//arkadas listesi servisi cagir
+		}
+		else {
+			System.out.println("FragmentationSqlCommend/fragmentSql icinde hata olustu...");
+		}
+	}
+}

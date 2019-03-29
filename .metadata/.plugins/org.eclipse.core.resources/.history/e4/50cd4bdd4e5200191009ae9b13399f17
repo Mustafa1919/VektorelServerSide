@@ -1,0 +1,14 @@
+package spook.controller;
+
+public class LoginController {
+	
+	public boolean checkIp(String ip) {
+		if(ip.split(".").length == 4) {
+			
+		}
+		String[] a = "a";
+		
+		return false;
+	}
+
+}

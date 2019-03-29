@@ -1,0 +1,53 @@
+package spook.socket.fragment;
+
+import spook.database.iservice.IMessageService;
+import spook.database.iservice.IUserService;
+import spook.database.service.MessageService;
+import spook.database.service.UserService;
+import spook.staticNumber.PriorityCode;
+
+public class FragmentationSqlCommend {
+
+	private IMessageService messageService;
+	private IUserService userService;
+
+	public FragmentationSqlCommend() {
+		messageService = new MessageService();
+		userService = new UserService();
+	}
+
+	public void fragmentSql(String data) throws Exception{
+		String priority = data.substring(0, 3);
+		String sqlTable = data.substring(3, 4);
+
+		if (priority.equals(PriorityCode.Save)) {
+			// kaydetme servisini cagır
+			if (sqlTable.equals(PriorityCode.MessageSql)) {
+				messageService.save(data.substring(4, data.length()));
+			} else if (sqlTable.equals(PriorityCode.UserSql)) {
+				userService.save(data.substring(4 , data.length()));
+			}
+		} else if (priority.equals(PriorityCode.Update)) {
+			// guncelleme servisi cagir
+			if (sqlTable.equals(PriorityCode.MessageSql)) {
+				messageService.update(data.substring(4,data.length()));
+			} else if (sqlTable.equals(PriorityCode.UserSql)) {
+				userService.update(data.substring(4, data.length()));
+			}
+		} else if (priority.equals(PriorityCode.Delete)) {
+			// delete servisi cagir
+			if (sqlTable.equals(PriorityCode.MessageSql)) {
+				messageService.delete(data.substring(4,data.length()));
+			} else if (sqlTable.equals(PriorityCode.UserSql)) {
+				userService.delete(data.substring(4, data.length()));
+			}
+		} else if (priority.equals(PriorityCode.ListReturn)) {
+			// arkadas listesi servisi cagir
+			if (sqlTable.equals(PriorityCode.UserSql)) {
+
+			}
+		} else {
+			System.out.println("FragmentationSqlCommend/fragmentSql icinde hata olustu...");
+		}
+	}
+}

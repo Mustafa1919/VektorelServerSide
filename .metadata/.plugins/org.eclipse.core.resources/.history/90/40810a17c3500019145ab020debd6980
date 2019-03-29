@@ -1,0 +1,5 @@
+package spook.staticNumber;
+
+public class UserNumber {
+	public static int userNumber = 5;
+}

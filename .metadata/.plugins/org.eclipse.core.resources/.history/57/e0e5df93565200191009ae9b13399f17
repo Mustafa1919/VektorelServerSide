@@ -1,0 +1,9 @@
+package spook.security;
+
+public class PasswdHashKod {
+	
+	public String Encryption(String passwd) {
+		
+	}
+	
+}

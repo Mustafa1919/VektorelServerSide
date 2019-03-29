@@ -1,0 +1,18 @@
+package spook.socket.fragment;
+
+import spook.staticNumber.PriorityCode;
+
+public class FragmentationData {
+	
+	public FragmentationData() {
+		
+	}
+	
+	public boolean fragmentData(String data) {
+		String priority = data.substring(0, 3);
+		if(priority.equals(PriorityCode.LogOut))
+			return false;
+		else if(data.)
+	}
+	
+}	

@@ -1,0 +1,11 @@
+package spook.socket.fragment;
+
+public class FragmentationSqlCommend {
+	
+	public FragmentationSqlCommend() {
+	}
+
+	public void fragmentSql(String data) {
+		String priority = data.substring(0, 3);
+	}
+}

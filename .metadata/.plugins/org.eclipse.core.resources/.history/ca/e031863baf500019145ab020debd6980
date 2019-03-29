@@ -1,0 +1,5 @@
+package spook.socket.iarrival;
+
+public class IListeningSocket {
+
+}

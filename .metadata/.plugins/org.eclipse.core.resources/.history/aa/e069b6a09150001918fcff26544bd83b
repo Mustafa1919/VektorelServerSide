@@ -1,0 +1,18 @@
+package test.server;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import spook.socket.arrival.ListeningSocket;
+
+public class TestServerRunner {
+	public static void main(String[] args) {
+		List<ListeningSocket> ls = new ArrayList<ListeningSocket>();
+		try {
+			ListeningSocket l = new ListeningSocket();
+			l.start();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

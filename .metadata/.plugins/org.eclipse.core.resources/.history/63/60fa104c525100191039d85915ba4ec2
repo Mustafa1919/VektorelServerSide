@@ -1,0 +1,17 @@
+package spook.database.iservice;
+
+import java.util.List;
+
+import spook.model.User;
+
+public interface IUserService {
+	
+	public boolean save(User user) throws Exception;
+	
+	public boolean update(User user) throws Exception;
+	
+	public boolean delete(User user) throws Exception;
+	
+	public List<User> getFriend(User user) throws Exception;
+
+}

@@ -1,0 +1,36 @@
+package spook.socket.arrival;
+
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.util.List;
+
+import spook.connectionPool.ConnectionPool;
+
+public class SenderSocket extends Thread{
+	
+	private DataOutputStream outputStream;
+	private ConnectionPool connectionPool;
+	private List<ListeningSocket> sockets;
+	private String ip ;
+	
+	public SenderSocket(String ip) {
+		this.ip = ip;
+		connectionPool = ConnectionPool.getConnectionPool();
+	}
+	
+	@Override
+	public void run() {
+		for(int i=0 ; i<=connectionPool.getSize(); i++) {
+			if(connectionPool.getUser(i).getSocket().getInetAddress().getHostAddress().equals(ip)) {
+				try {
+					outputStream = new DataOutputStream(connectionPool.getUser(i).getSocket().getOutputStream());
+					
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+	
+}

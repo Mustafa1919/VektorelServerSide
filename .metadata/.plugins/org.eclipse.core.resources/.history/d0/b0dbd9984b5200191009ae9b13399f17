@@ -1,0 +1,24 @@
+package spook.server.connection;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.Socket;
+
+import spook.util.SocketInfo;
+
+public class ServerConnection extends Thread{
+	
+	private DataInputStream inputStream;
+	private DataOutputStream outputStream;
+	private Socket socket;
+	
+	public ServerConnection() throws Exception{
+		socket = new Socket(SocketInfo.serverIp, SocketInfo.serverSocket);
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		super.run();
+	}
+}

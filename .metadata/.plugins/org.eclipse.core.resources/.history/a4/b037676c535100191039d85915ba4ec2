@@ -1,0 +1,7 @@
+package spook.database.idao;
+
+import spook.jutil.iDataBase;
+
+public interface IUserDao extends iDataBase<User>{
+
+}

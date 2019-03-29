@@ -1,0 +1,9 @@
+package spook.socket.arrival;
+
+import java.net.ServerSocket;
+
+public class LayerSocket {
+	
+	private ServerSocket serverSocket ;
+
+}

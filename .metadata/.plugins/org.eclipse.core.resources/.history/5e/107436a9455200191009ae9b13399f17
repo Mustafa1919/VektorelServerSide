@@ -1,0 +1,19 @@
+package spook.gui;
+
+import javax.swing.JFrame;
+import javax.swing.JMenuBar;
+
+public class MainFrame extends JFrame{
+	public MainFrame() {
+		initialize();
+	}
+
+	private void initialize() {
+		// TODO Auto-generated method stub
+		setBounds(100, 100, 600, 600);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+	}
+
+}

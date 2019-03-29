@@ -1,0 +1,25 @@
+package test1;
+
+public class RUnner {
+	
+	import java.io.DataInputStream;
+	import java.io.DataOutputStream;
+	import java.io.IOException;
+	import java.net.Socket;
+
+	public class Test2 {
+		public static void main(String[] args) {
+			try {
+				Socket socket = new Socket("localhost",4458);
+				DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());
+				DataInputStream inputStream = new DataInputStream(socket.getInputStream());
+				
+				outputStream.writeUTF("Hello");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+
+}
