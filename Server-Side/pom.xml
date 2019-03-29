@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Server-Side</groupId>
+	<artifactId>Server-Side</artifactId>
+	<version>0.0.1</version>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<release>10</release>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<properties>
+		<hibernate.version>4.1.9.Final</hibernate.version>
+		<postgresql.version> 42.2.5 </postgresql.version>
+		<hibernatecore.version>4.1.9.Final</hibernatecore.version>
+		<hibernatec3p0.version>4.1.9.Final</hibernatec3p0.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgresql.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernatecore.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>${hibernatec3p0.version}</version>
+		</dependency>
+
+	</dependencies>
+
+</project>

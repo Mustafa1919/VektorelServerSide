@@ -1,0 +1,38 @@
+package spook.socket.arrival;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+import spook.util.SocketInfo;
+
+public class ConnectionSocket {
+	
+	private ServerSocket serverSocket = null;
+	private static ConnectionSocket connectionSocket = null;
+	
+	private ConnectionSocket() throws IOException{
+		serverSocket = new ServerSocket(SocketInfo.listeningSocket);
+	}
+	
+	public static ConnectionSocket getConnectionSocket() throws IOException{
+		if(connectionSocket == null)
+			connectionSocket = new ConnectionSocket();
+		return connectionSocket;
+	}
+	
+	public ServerSocket getServerSocket() {
+		if(serverSocket != null)
+			return serverSocket;
+		return null;
+	}
+	
+	public boolean closeServerSocket() {
+		try {
+			serverSocket.close();
+			return true;
+		} catch (IOException e) {
+			System.out.println("Server Socket Kapatilamadi...");
+			return false;
+		}
+	}
+}
