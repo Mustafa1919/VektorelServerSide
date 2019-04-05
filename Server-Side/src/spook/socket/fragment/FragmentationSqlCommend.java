@@ -19,6 +19,8 @@ public class FragmentationSqlCommend {
 	public void fragmentSql(String data) throws Exception{
 		String priority = data.substring(0, 3);
 		String sqlTable = data.substring(3, 4);
+		System.out.println(priority);
+		System.out.println(sqlTable);
 
 		if (priority.equals(PriorityCode.Save)) {
 			// kaydetme servisini cagır

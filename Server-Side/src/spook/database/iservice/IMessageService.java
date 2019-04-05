@@ -16,4 +16,6 @@ public interface IMessageService {
 	
 	public boolean delete(String data) throws Exception;
 	
+	public boolean lateMessage(String userName, String data) throws Exception;
+	
 }

@@ -21,5 +21,9 @@ public interface IUserService {
 	public List<User> getAllUsers() throws Exception;
 	
 	public boolean getUser(String data) throws Exception;
+	
+	public boolean logOutUser(String ip) throws Exception;
+	
+	public String getUserName(String ip) throws Exception;
 
 }
